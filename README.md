@@ -1,4 +1,4 @@
-# reduce-promise
+# array-reducer
 
 ![code coverage][shield-coverage]
 ![file size][shield-size]
