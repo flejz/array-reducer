@@ -1,2 +1,2 @@
 # reduce-promise
-Reduces an array with an promise/async reduce function
+Reduces an array. Supports sync and promise/async reducer functions

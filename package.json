@@ -1,0 +1,30 @@
+{
+  "name": "array-reducer",
+  "version": "1.0.0",
+  "description": "Reduces an array. Supports sync and promise/async reducer functions",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "mocha tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flejz/array-reducer.git"
+  },
+  "keywords": [
+    "javascript",
+    "array",
+    "reduce",
+    "async",
+    "await",
+    "promise"
+  ],
+  "author": "@flejz",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/flejz/array-reducer/issues"
+  },
+  "homepage": "https://github.com/flejz/array-reducer#readme",
+  "devDependencies": {
+    "mocha": "^6.2.2"
+  }
+}
