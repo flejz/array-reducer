@@ -1,5 +1,5 @@
 {
-  "name": "@flejz/array-reducer",
+  "name": "array-reducer",
   "version": "1.0.0",
   "description": "Reduces an array. Supports sync and promise/async reducer functions",
   "main": "src/index.js",
