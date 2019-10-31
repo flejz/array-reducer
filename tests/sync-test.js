@@ -16,8 +16,13 @@ describe('sync', function() {
     assert.deepEqual(obj, { '1': 1, '2': 4, '3': 9, '4': 16 })
   })
 
-  it('should perform a sync reduction of a simple sum without a valid array', () => {
+  it('should perform a sync reduction of a simple sum without a valid array - null', () => {
     const summed = reducer(null, sum, 0)
+    assert.equal(summed, 0)
+  })
+
+  it('should perform a sync reduction of a simple sum without a valid array - obj', () => {
+    const summed = reducer({}, sum, 0)
     assert.equal(summed, 0)
   })
 })
