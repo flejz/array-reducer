@@ -1,21 +1,22 @@
-module.exports = (arr, fn, acc) => {
-  return fn.constructor.name === 'AsyncFunction'
-    ? reduceAsync(arr, fn, acc)
-    : reduce(arr, fn, acc);
+module.exports = function(arr, f, a) {
+  return !arr || !Array.isArray(arr)
+    ? a
+    : f.constructor.name === 'AsyncFunction'
+      ? reduceAsync(arr, f, a)
+      : reduce(arr, f, a)
 }
 
-function reduceAsync(arr, fn, acc) {
-  return (arr || []).reduce(async (p, i) => {
-    return await fn(await p, i)
-  }, Promise.resolve(acc));
+function reduceAsync(arr, f, a) {
+  return arr.reduce(async (p, i) => {
+    return await f(await p, i)
+  }, Promise.resolve(a))
 }
 
-function reduce(arr, fn, acc) {
-  const n = [...(arr || [])]
+function reduce(arr, f, a) {
+  const n = [...arr]
   const i = n.shift()
-  const a = fn(acc, i)
-  if (a.then) {
-    return reduceAsync(n, fn, a)
-  }
-  return n.reduce(fn, a);
+  const r = f(a, i)
+  return r.then
+    ? reduceAsync(n, f, r)
+    : n.reduce(f, r)
 }
