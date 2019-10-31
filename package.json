@@ -1,10 +1,11 @@
 {
   "name": "array-reducer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Reduces an array. Supports sync and promise/async reducer functions",
   "main": "src/index.js",
   "scripts": {
-    "test": "nyc mocha tests"
+    "test": "nyc mocha tests",
+    "prepublish": "npm test"
   },
   "repository": {
     "type": "git",

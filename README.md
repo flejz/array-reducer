@@ -6,7 +6,7 @@
 
 [shield-coverage]: https://img.shields.io/badge/coverage-100%25-success
 [shield-size]: https://img.shields.io/github/size/flejz/array-reducer/src/index.js
-[shield-release]: https://img.shields.io/github/v/release/flejz/array-reducer
+[shield-release]: https://img.shields.io/github/package-json/v/flejz/array-reducer
 
 Never carry anymore about async reduce an array.
 Install with:
