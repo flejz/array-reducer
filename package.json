@@ -3,6 +3,7 @@
   "version": "1.0.3",
   "description": "Reduces an array. Supports sync and promise/async reducer functions",
   "main": "src/index.js",
+  "types": "src/types.d.ts",
   "scripts": {
     "test": "nyc mocha tests",
     "prepublish": "npm test"
